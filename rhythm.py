@@ -33,7 +33,7 @@ class App:
             self.current_beat = (self.current_beat + 0.25) % 8
             self.character_frame = (pyxel.frame_count // 15) % 4
 
-            if pyxel.btnp(pyxel.KEY_SPACE) and not self.is_jumping:
+            if (pyxel.btnp(pyxel.KEY_SPACE) or pyxel.btnp(pyxel.GAMEPAD1_BUTTON_A)) and not self.is_jumping:
                 self.is_jumping = True
                 self.jump_speed = -10
 
